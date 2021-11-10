@@ -8,15 +8,15 @@ import retrofit2.http.Headers
 
 interface AnimeApi {
 
-    @GET("./test.php?q=post&id=1")
-    @Headers("Content-type: application/json")
+    @GET("./api.php?q=post&id=1")
+    @Headers("Content-type: application/json; charset=utf-8")
     fun getAnimeList(): Single<AnimeListResponse>
 
-    @GET("./test.php?q=post&id=1")
-    @Headers("Content-type: application/json")
+    @GET("./api.php?q=post&id=1")
+    @Headers("Content-type: application/json; charset=utf-8")
     fun getAnime1(): Single<AnimeListResponse>
 
-    @GET("./test.php?q=post&id=2")
-    @Headers("Content-type: application/json")
+    @GET("./api.php?q=post&id=2")
+    @Headers("Content-type: application/json; charset=utf-8")
     fun getAnime2(): Single<AnimeListResponse>
 }

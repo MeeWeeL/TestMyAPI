@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import androidx.core.graphics.drawable.toDrawable
+import androidx.core.text.htmlEncode
 import com.meeweel.testmyapi.api.AnimeApi
 import com.meeweel.testmyapi.api.AnimeApp
 import com.meeweel.testmyapi.databinding.ActivityMainBinding
@@ -45,6 +46,7 @@ class MainActivity : AppCompatActivity() {
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
+
                 doTo("Done!")
                 anime = Anime(it.title,it.description,it.image)
                 binding.title.text = anime.title
